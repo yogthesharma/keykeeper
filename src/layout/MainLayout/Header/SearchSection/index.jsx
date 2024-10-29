@@ -19,7 +19,6 @@ import Transitions from 'ui-component/extended/Transitions';
 
 // assets
 import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons-react';
-import { Tooltip } from '@mui/material';
 
 const HeaderAvatar = forwardRef(({ children, ...others }, ref) => {
     const theme = useTheme();
@@ -144,7 +143,7 @@ const SearchSection = () => {
                     )}
                 </PopupState>
             </Box>
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            {/* <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 <Tooltip title="Feature coming soon, stay tuned!" arrow>
                     <OutlinedInput
                         id="input-search-header"
@@ -169,7 +168,7 @@ const SearchSection = () => {
                         sx={{ width: { md: 250, lg: 434 }, ml: 2, px: 2 }}
                     />
                 </Tooltip>
-            </Box>
+            </Box> */}
         </>
     );
 };
