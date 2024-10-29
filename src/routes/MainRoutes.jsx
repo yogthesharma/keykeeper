@@ -8,6 +8,10 @@ import Loadable from 'ui-component/Loadable';
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 
+// new page imports
+const HomePage = Loadable(lazy(() => import('views/pages/home')));
+const LoginPage = Loadable(lazy(() => import('views/pages/login')));
+
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
 const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
@@ -26,7 +30,11 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <SamplePage />
+            element: <HomePage />
+        },
+        {
+            path: 'login',
+            element: <LoginPage />
         }
         // {
         //     path: 'dashboard',
