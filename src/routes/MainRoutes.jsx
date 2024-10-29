@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { lazy } from 'react';
 
 // project imports
@@ -25,44 +26,44 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <DashboardDefault />
-        },
-        {
-            path: 'dashboard',
-            children: [
-                {
-                    path: 'default',
-                    element: <DashboardDefault />
-                }
-            ]
-        },
-        {
-            path: 'utils',
-            children: [
-                {
-                    path: 'util-typography',
-                    element: <UtilsTypography />
-                }
-            ]
-        },
-        {
-            path: 'utils',
-            children: [
-                {
-                    path: 'util-color',
-                    element: <UtilsColor />
-                }
-            ]
-        },
-        {
-            path: 'utils',
-            children: [
-                {
-                    path: 'util-shadow',
-                    element: <UtilsShadow />
-                }
-            ]
-        },
+            element: <SamplePage />
+        }
+        // {
+        //     path: 'dashboard',
+        //     children: [
+        //         {
+        //             path: 'default',
+        //             element: <DashboardDefault />
+        //         }
+        //     ]
+        // },
+        // {
+        //     path: 'utils',
+        //     children: [
+        //         {
+        //             path: 'util-typography',
+        //             element: <UtilsTypography />
+        //         }
+        //     ]
+        // },
+        // {
+        //     path: 'utils',
+        //     children: [
+        //         {
+        //             path: 'util-color',
+        //             element: <UtilsColor />
+        //         }
+        //     ]
+        // },
+        // {
+        //     path: 'utils',
+        //     children: [
+        //         {
+        //             path: 'util-shadow',
+        //             element: <UtilsShadow />
+        //         }
+        //     ]
+        // },
         // {
         //   path: 'icons',
         //   children: [
@@ -81,11 +82,13 @@ const MainRoutes = {
         //     }
         //   ]
         // },
-        {
-            path: 'sample-page',
-            element: <SamplePage />
-        }
+        // {
+        //     path: 'sample-page',
+        //     element: <SamplePage />
+        // }
     ]
 };
 
 export default MainRoutes;
+
+// TODO: Remove the eslint warnings

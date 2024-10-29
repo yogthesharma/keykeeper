@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';
+import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -86,8 +87,9 @@ const ProfileSection = () => {
     }, [open]);
 
     return (
-        <>
+        <Tooltip title="Feature coming soon, stay tuned!" arrow>
             <Chip
+                disabled
                 sx={{
                     height: '48px',
                     alignItems: 'center',
@@ -300,7 +302,7 @@ const ProfileSection = () => {
                     </Transitions>
                 )}
             </Popper>
-        </>
+        </Tooltip>
     );
 };
 
