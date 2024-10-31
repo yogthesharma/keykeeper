@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { useTheme } from '@mui/material/styles';
 import { Button } from '@mui/material';
@@ -10,6 +11,15 @@ import AnimateButton from 'ui-component/extended/AnimateButton';
 const AuthButtons = () => {
     const theme = useTheme();
     const customization = useSelector((state) => state.customization);
+    const navigate = useNavigate();
+
+    const handleLoginButtonClick = () => {
+        navigate('/login');
+    };
+
+    const handleSignUpButtonClick = () => {
+        navigate('/register');
+    };
 
     return (
         <Box sx={{ display: 'flex', alignItems: 'center', columnGap: 2 }}>
@@ -25,11 +35,11 @@ const AuthButtons = () => {
                     }}
                     disableElevation
                     disableRipple
+                    onClick={handleSignUpButtonClick}
                 >
                     Sign Up
                 </Button>
             </AnimateButton>
-
             <AnimateButton>
                 <Button
                     variant="contained"
@@ -42,6 +52,7 @@ const AuthButtons = () => {
                     }}
                     disableElevation
                     disableRipple
+                    onClick={handleLoginButtonClick}
                 >
                     Login
                 </Button>

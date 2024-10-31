@@ -9,14 +9,12 @@ import { FiberManualRecordOutlined } from '@mui/icons-material';
 import MainCard from 'ui-component/cards/MainCard';
 import { Box } from '@mui/system';
 
-// ==============================|| SAMPLE PAGE ||============================== //
-
 const HomePage = () => (
     <Grid>
         <MainCard title="KeyKeeper">
             <Grid container gap={4}>
                 <Grid xs={12} item>
-                    <Typography sx={{ fontWeight: 'bold' }}>Overview</Typography>
+                    <Typography sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>Overview</Typography>
                     <Typography>
                         KeyKeeper is a state-of-the-art user authentication and authorization service designed to provide robust security
                         while being easy to integrate with your applications.

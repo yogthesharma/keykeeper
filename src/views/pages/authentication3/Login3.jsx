@@ -63,12 +63,7 @@ const Login = () => {
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Grid item container direction="column" alignItems="center" xs={12}>
-                                            <Typography
-                                                component={Link}
-                                                to="/pages/register/register3"
-                                                variant="subtitle1"
-                                                sx={{ textDecoration: 'none' }}
-                                            >
+                                            <Typography component={Link} to="/register" variant="subtitle1" sx={{ textDecoration: 'none' }}>
                                                 Don&apos;t have an account?
                                             </Typography>
                                         </Grid>
@@ -78,9 +73,9 @@ const Login = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
+                {/* <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
                     <AuthFooter />
-                </Grid>
+                </Grid> */}
             </Grid>
         </AuthWrapper1>
     );
