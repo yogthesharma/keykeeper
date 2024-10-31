@@ -55,7 +55,8 @@ const AuthLogin = ({ ...others }) => {
 
     return (
         <>
-            <Grid container direction="column" justifyContent="center" spacing={2}>
+            {/* disabling google login */}
+            {/* <Grid container direction="column" justifyContent="center" spacing={2}>
                 <Grid item xs={12}>
                     <AnimateButton>
                         <Button
@@ -112,7 +113,7 @@ const AuthLogin = ({ ...others }) => {
                         <Typography variant="subtitle1">Sign in with Email address</Typography>
                     </Box>
                 </Grid>
-            </Grid>
+            </Grid> */}
 
             <Formik
                 initialValues={{

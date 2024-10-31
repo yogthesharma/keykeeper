@@ -4,9 +4,14 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
+import Login from 'views/pages/authentication3/Login3';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
+
+// new page imports
+const HomePage = Loadable(lazy(() => import('views/pages/home')));
+const LoginPage = Loadable(lazy(() => import('views/pages/login')));
 
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -26,7 +31,7 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <SamplePage />
+            element: <HomePage />
         }
         // {
         //     path: 'dashboard',

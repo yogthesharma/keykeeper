@@ -4,12 +4,13 @@ import pages from './pages';
 import utilities from './utilities';
 import other from './other';
 import home from './home';
+import login from './login';
 
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems = {
     // dashboard, pages, utilities, other
-    items: [home]
+    items: [home, login]
 };
 
 export default menuItems;

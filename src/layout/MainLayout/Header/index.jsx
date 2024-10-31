@@ -11,6 +11,7 @@ import LogoSection from '../LogoSection';
 import SearchSection from './SearchSection';
 import NotificationSection from './NotificationSection';
 import ProfileSection from './ProfileSection';
+import AuthButtons from './AuthButtons';
 
 // assets
 import { IconMenu2 } from '@tabler/icons-react';
@@ -19,6 +20,9 @@ import { IconMenu2 } from '@tabler/icons-react';
 
 const Header = ({ handleLeftDrawerToggle }) => {
     const theme = useTheme();
+
+    // Move this to store later
+    const isLogin = false;
 
     return (
         <>
@@ -35,26 +39,28 @@ const Header = ({ handleLeftDrawerToggle }) => {
                 <Box component="span" sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
                     <LogoSection />
                 </Box>
-                <ButtonBase sx={{ borderRadius: '8px', overflow: 'hidden' }}>
-                    <Avatar
-                        variant="rounded"
-                        sx={{
-                            ...theme.typography.commonAvatar,
-                            ...theme.typography.mediumAvatar,
-                            transition: 'all .2s ease-in-out',
-                            background: theme.palette.secondary.light,
-                            color: theme.palette.secondary.dark,
-                            '&:hover': {
-                                background: theme.palette.secondary.dark,
-                                color: theme.palette.secondary.light
-                            }
-                        }}
-                        onClick={handleLeftDrawerToggle}
-                        color="inherit"
-                    >
-                        <IconMenu2 stroke={1.5} size="1.3rem" />
-                    </Avatar>
-                </ButtonBase>
+                {isLogin ? (
+                    <ButtonBase sx={{ borderRadius: '8px', overflow: 'hidden' }}>
+                        <Avatar
+                            variant="rounded"
+                            sx={{
+                                ...theme.typography.commonAvatar,
+                                ...theme.typography.mediumAvatar,
+                                transition: 'all .2s ease-in-out',
+                                background: theme.palette.secondary.light,
+                                color: theme.palette.secondary.dark,
+                                '&:hover': {
+                                    background: theme.palette.secondary.dark,
+                                    color: theme.palette.secondary.light
+                                }
+                            }}
+                            onClick={handleLeftDrawerToggle}
+                            color="inherit"
+                        >
+                            <IconMenu2 stroke={1.5} size="1.3rem" />
+                        </Avatar>
+                    </ButtonBase>
+                ) : null}
             </Box>
 
             {/* header search */}
@@ -63,8 +69,14 @@ const Header = ({ handleLeftDrawerToggle }) => {
             <Box sx={{ flexGrow: 1 }} />
 
             {/* notification & profile */}
-            <NotificationSection />
-            <ProfileSection />
+            {isLogin ? (
+                <>
+                    <NotificationSection />
+                    <ProfileSection />
+                </>
+            ) : (
+                <AuthButtons />
+            )}
         </>
     );
 };
